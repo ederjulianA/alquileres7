@@ -1,0 +1,161 @@
+#themeSwitcher {
+    background: transparent url(http://frame.themeforest.createit.pl/assets/createit/images/bar-bg.png) repeat-x;
+    height: 61px;
+    -webkit-box-shadow: 0 0 17px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 17px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 17px rgba(0, 0, 0, .1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+#themeSwitcher.no-shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#themeSwitcher img {
+    vertical-align: inherit;
+    height: inherit;
+    max-width: inherit;
+}
+
+#themeSwitcher a img {
+    border: none;
+}
+
+.switcherContainer {
+    width: 945px;
+    margin: 0 auto;
+}
+
+.switcherCtLogo {
+    width: 128px;
+    height: 48px;
+    display: inline-block;
+}
+
+.switcherClose {
+    display: inline-block;
+    background: transparent url(http://frame.themeforest.createit.pl/assets/createit/images/close.png) no-repeat center 20px;
+    height: 48px;
+    width: 22px;
+    margin-left: 100px;
+}
+
+.switcherPurchase {
+    display: inline-block;
+    height: 48px;
+    width: 127px;
+    background: transparent url(http://frame.themeforest.createit.pl/assets/createit/images/btn.png) no-repeat top center;
+}
+
+.switcherRt {
+    float: right;
+    position: relative;
+    min-width: 500px;
+    text-align: right;
+}
+
+.switcherRt select {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 200px;
+    font-size: 12px;
+    color: #000;
+    padding: 4px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    border: 1px solid #bbb;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #fff;
+    font-style: normal;
+}
+
+.tempContainer { background: #ccc; min-height: 1600px; }
+
+.trLogo { padding-left: 15px; }
+
+@media (max-width: 945px) {
+    .switcherContainer {
+        width: auto;
+        padding: 0 20px 0 0;
+    }
+    .switcherHide {
+        display: none;
+    }
+
+    .switcherClose {
+        margin-left: 15px;
+    }
+    .switcherRt {
+        min-width: 390px;
+    }
+
+}
+
+@media (max-width: 780px) {
+
+    .switcherRt {
+        min-width: 210px;
+    }
+    .switcherRt select {
+        width: 100px;
+    }
+
+    .switcherHideIphone { padding-left: 20px }
+
+    .switcherPurchase {
+        display: inline-block;
+        height: 48px;
+        width: 47px;
+        background: transparent url(http://frame.themeforest.createit.pl/assets/createit/images/btn-buy.png) no-repeat top center;
+    }
+
+}
+
+@media (max-width: 630px) {
+
+    .switcherContainer {
+        width: auto;
+        padding: 0 5px;
+    }
+
+    .switcherRt {
+        min-width: 200px;
+    }
+
+    .switcherRt select {
+        width: 100px;
+    }
+
+    .switcherClose {
+        margin-left: 5px;
+    }
+
+    .switcherHideIphone {
+        padding: 0;
+        width: 70px;
+        margin-top: 20px;
+    }
+}
+
+.codecanyon select {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}

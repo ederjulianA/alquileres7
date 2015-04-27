@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dish - Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+     <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    <![endif]-->
+    <script src="libs/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="libs/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="libs/contact-form.js"></script>
+    <script src="libs/less-1.3.3.min.js"></script>
+
+    <script src="libs/jquery.scrollto-1.4.3.1-min.js"></script>
+    <script src="libs/jquery.easing.1.3.js"></script>
+    <script src="libs/jquery.tweet.js"></script>
+    <script src="libs/custom.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div id="boxedWrapper">
+
+<header id="top">
+
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12">
+
+                <nav class="short-contact pull-right">
+                    <ul class="wheel-group">
+                        <li><p></p></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-google-plus"></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-rss"></i></a></li>
+                    </ul>
+                    <div class="line"></div>
+                </nav>
+
+                <div class="clearfix"></div>
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="brand" href="index.html">Dish</a>
+
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="dropdown">
+                                    <a href="02_aboutus.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="02_aboutus.html">About Us</a></li>
+                                        <li><a href="10_icons.html">Icons</a></li>
+                                        <li><a href="01_home-green.html">Green Variant</a></li>
+                                        <li><a href="01_home-brown.html">Brown Variant</a></li>
+                                        <li><a href="01_home-orange.html">Orange Variant</a></li>
+                                        <li><a href="01_home-pink-blue.html">Pink Blue Variant</a></li>
+                                        <li><a href="01_home-steel.html">Steel Variant</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="03_menucard.html">Menucard</a></li>
+                                <li class="active"><a href="04_gallery.html">Gallery</a></li>
+                                <li class="dropdown">
+                                    <a href="02_aboutus.html" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="05_blog.html">Blog List</a></li>
+                                        <li><a href="06_single.html">Single Post</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="09_all_sections.html" class="dropdown-toggle" data-toggle="dropdown">Elements</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="09_all_sections.html">All sections</a></li>
+                                        <li><a href="12_posttypes.html">Post types</a></li>
+                                        <li><a href="13_faq.html">FAQ</a></li>
+                                        <li><a href="14_shortcode_boxes.html">Boxes</a></li>
+                                        <li><a href="15_shortcode_buttons_typo.html">Typography</a></li>
+                                        <li><a href="16_shortcode_elements.html">Toggleable</a></li>
+                                        <li><a href="17_shortcode_pricing_tables.html">Pricing Tables</a></li>
+                                        <li><a href="18_single_product.html">Single Product</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="07_contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<section id="content">
+
+<div class="container">
+<div class="row-fluid">
+<div class="span12">
+
+<div class="intro"> <!-- intro -->
+    <header>
+        <h1>Disfruta de muestra galería de eventos<span> organizados por nosotros</span>  </h1>
+    </header>
+    <div class="book-table">
+        <form action="form/table.php" method="post" class="contactForm">
+            <fieldset>
+                <div class="row-fluid">
+                    <div class="span10">
+                        <div class="row-fluid">
+                            <div class="span2">
+                                <label for="book-name">Name</label>
+                                <input type="text" value="" name="name" required class="input-text" id="book-name">
+                            </div>
+                            <div class="span2">
+                                <label for="book-email">E-mail</label>
+                                <input type="text" value="" class="input-text" name="email" required id="book-email">
+                            </div>
+                            <div class="span2">
+                                <label for="book-phone">Phone</label>
+                                <input type="text" value="" class="input-text" name="phone" required id="book-phone">
+                            </div>
+                            <div class="span2">
+                                <label for="book-guests">Guests</label>
+                                <input type="text" value="" class="input-text" name="guests" required id="book-guests">
+                            </div>
+                            <div class="span2">
+                                <label for="book-date">Date</label>
+                                <input type="text" value="" class="input-text" name="date" required id="book-date">
+                            </div>
+                            <div class="span2">
+                                <label for="book-time">Time</label>
+                                <select name="time" required id="book-time">
+                                    <option>7:00 AM</option>
+                                    <option selected="selected">8:00 AM</option>
+                                    <option>9:00 AM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <input type="submit" value="Place booking" class="btn btn-primary input-submit">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="separator"></div>
+    <a href="#" class="btn-book-table">Book a<br>table</a>
+</div>
+<!-- intro -->
+
+<section id="gallery">
+
+    <header class="title">
+        <h2>Galería.</h2>
+    </header>
+
+    <div class="filter separator">
+        <ul id="gallery-tabs">
+            <li class="active"><a href="#tab-matrimonio" data-toggle="tab">Matrimonios</a></li>
+            <li><a href="#tab-cumple" data-toggle="tab">Cumpleaños</a></li>
+            <li><a href="#tab-quince" data-toggle="tab">Quinceañeros</a></li>
+            <li><a href="#tab-grados" data-toggle="tab">Grados</a></li>
+        </ul>
+    </div>
+
+    <div class="gallery">
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-matrimonio">
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/boda1.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/boda2.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/boda3.jpg" alt=""></figure>
+                    </li>
+                </ul>
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/boda4.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/boda5.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/boda6.jpg" alt=""></figure>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="tab-pane" id="tab-cumple">
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/emp1.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/emp2.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/emp3.jpg" alt=""></figure>
+                    </li>
+                </ul>
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/emp4.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/emp5.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/emp6.jpg" alt=""></figure>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="tab-pane" id="tab-quince">
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img34.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img35.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img36.jpg" alt=""></figure>
+                    </li>
+                </ul>
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img40.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img41.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img42.jpg" alt=""></figure>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-pane" id="tab-grados">
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img40.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img41.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img42.jpg" alt=""></figure>
+                    </li>
+                </ul>
+                <ul class="row-fluid media-group">
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img34.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img35.jpg" alt=""></figure>
+                    </li>
+                    <li class="span4">
+                        <figure class="border"><img src="images/content-demo/img36.jpg" alt=""></figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="separator"></div>
+
+       <!-- //additional information -->
+
+</section>
+
+<div class="separator"></div>
+
+</div>
+<!-- //span -->
+</div>
+<!-- //row -->
+</div>
+<!-- //container -->
+
+</section>
+
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span3">
+                <p>
+                    &copy; Copyright 2013 <strong>dish.</strong>/ <span>Coded by <a href="http://outsourcing.createit.pl/"><strong>createIT</strong></a></span>
+                </p>
+
+                <p>
+                    PSD Template by <a href="#">templaterockers</a>
+                </p>
+            </div>
+            <div class="span9">
+                <nav class="social-list">
+                    <ul class="wheel-group">
+                        <li><a href="#"><i class="random"><img src="images/icon-random.png" alt=""></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-google-plus"></i></a></li>
+                        <li><a href="#"><i class="wheel wheel-social icon-rss"></i></a></li>
+                        <li><a href="#top" class="btn gotop">Top</a></li>
+                    </ul>
+                </nav>
+                <nav class="short-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Gallerie</a></li>
+                        <li><a href="#">Shortcodes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+<!-- //boxedWrapper -->
+<!-- frame -->
+
+
+<link href="http://frame.themeforest.createit.pl/assets/createit/css/style.css" media="all" rel="stylesheet" type="text/css">
+<script src="http://frame.themeforest.createit.pl/assets/js/switcher.js"></script>
+<div id="themeSwitcher">
+	<div class="switcherContainer">
+		<a href="http://themeforest.net/user/createit-pl/portfolio?ref=createit-pl"><img src="http://frame.themeforest.createit.pl/assets/createit/images/ct.png" alt="createit" class="switcherHideIphone"></a>
+				<div class="switcherRt">
+			<select name="theme" id="themeSelect">
+				<optgroup label="ThemeForest">
+																	<option value="http://foodtruck.html.themeforest.createit.pl/">HTML FoodTruck 10 in 1</option>
+																	<option value="http://delimondo.wp.themeforest.createit.pl">WP Delimondo 5 in 1</option>
+																	<option value="http://seafresh.wp.themeforest.createit.pl"> - Seafresh</option>
+																	<option value="http://cupcake.wp.themeforest.createit.pl"> - Cupcake</option>
+																	<option value="http://blackangus.wp.themeforest.createit.pl"> - Black Angus</option>
+																	<option value="http://pizza.wp.themeforest.createit.pl"> - Pizza</option>
+																	<option value="http://lecanard.wp.themeforest.createit.pl"> - Le Canard</option>
+																	<option value="http://3in1delimondo.html.themeforest.createit.pl/">HTML Delimondo 3 in 1</option>
+																	<option value="http://pizza.html.themeforest.createit.pl"> - Pizza</option>
+																	<option value="http://blackangus.html.themeforest.createit.pl"> - Black Angus</option>
+																	<option value="http://lecanard.html.themeforest.createit.pl"> - LeCanard</option>
+																	<option value="http://seafresh.html.themeforest.createit.pl"> HTML Seafresh</option>
+																	<option value="http://cupcake.html.themeforest.createit.pl"> HTML Cupcake</option>
+																	<option value="http://invia.html.themeforest.createit.pl">HTML INVIA</option>
+																	<option value="http://invia.wp.themeforest.createit.pl">WP INVIA</option>
+																	<option value="http://invision.html.themeforest.createit.pl">HTML INVISION</option>
+																	<option value="http://simpl.html.themeforest.createit.pl">HTML SIMPL</option>
+																	<option selected="selected" value="http://dish.html.themeforest.createit.pl">HTML Dish</option>
+																	<option value="http://dish.wp.themeforest.createit.pl">WP Dish</option>
+																	<option value="http://simpl.splash.wp.themeforest.createit.pl">WP Simpl</option>
+																	<option value="http://simpl.wp.themeforest.createit.pl"> - SIMPL Light</option>
+									</optgroup>
+				<optgroup label="CodeCanyon">
+					<option value="http://codecanyon.net/user/createit-pl/portfolio?ref=createit-pl">This is where our magic begins</option>
+				</optgroup>
+			</select>
+
+			<a href="http://themeforest.net/item/dish-multipurpose-site-restaurant-template/4783129?ref=createit-pl" class="switcherPurchase" title="Purchase"></a>
+			<a href="#" class="switcherClose" title="close"></a>
+		</div>
+	</div>
+</div>
+
+<!-- end frame -->
+<!-- switcher -->
+<!-- switcher -->
+<script src="./demo/js/demo.js"></script>
+<link rel="stylesheet" type="text/css" href="./demo/css/demo.css">
+<div id="stylechooser">
+
+    <div class="easyBox">
+        <h6>Style Switcher</h6>
+        <a href="#" id="styleToggle"><i class="icon-cog"></i>Settings</a>
+
+
+        <hr>
+
+        <div class="mkSpace">
+            <div class="layType">
+                <label>Layout: </label>
+                <a href="#" data-refresh="true" class="demoActive" data-dependent="#demoPatterns .demoActive" data-value="wide" id="layoutWide">Wide <i class="icon-resize-full"></i></a>
+                <a data-refresh="true" href="#" data-value="boxed" id="layoutBoxed">Boxed <i class="icon-resize-small"></i></a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="mkSpace">
+            <label>Background Patterns:</label>
+            <ul class="demoList clearfix" id="demoPatterns">
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat1"><img src="./demo/images/patterns-mini/01.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat2"><img src="./demo/images/patterns-mini/02.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat3"><img src="./demo/images/patterns-mini/03.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat4"><img src="./demo/images/patterns-mini/04.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat5"><img src="./demo/images/patterns-mini/05.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat6"><img src="./demo/images/patterns-mini/06.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat7"><img src="./demo/images/patterns-mini/07.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat8"><img src="./demo/images/patterns-mini/08.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat9"><img src="./demo/images/patterns-mini/09.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat10"><img src="./demo/images/patterns-mini/10.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat11"><img src="./demo/images/patterns-mini/11.png" alt=""></a></li>
+                <li><a href="#" data-action="#layoutBoxed" data-dependent="#layoutWide.demoActive" data-value="pat12"><img src="./demo/images/patterns-mini/12.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <hr>
+        <div class="mkSpace">
+            <label>Theme Flavors:</label>
+            <ul class="demoList flavors clearfix">
+                <li><a class="v1 demoActive" href="index.html"><span class="demoColor" ><img src="demo/images/v1.png" alt=""></span></a></li>
+                <li><a class="v2" href="01_home-green.html"><span class="demoColor" ><img src="demo/images/v2.png" alt=""></span></a></li>
+                <li><a class="v3" href="01_home-brown.html"><span class="demoColor" ><img src="demo/images/v3.png" alt=""></span></a></li>
+                <li><a class="v4" href="01_home-pink-blue.html"><span class="demoColor" ><img src="demo/images/v4.png" alt=""></span></a></li>
+                <li><a class="v5" href="01_home-steel.html"><span class="demoColor" ><img src="demo/images/v5.png" alt=""></span></a></li>
+                <li><a class="v6" href="01_home-orange.html"><span class="demoColor" ><img src="demo/images/v6.png" alt=""></span></a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- end switcher -->
+<!-- end switcher -->
+</body>
+
+</html>
