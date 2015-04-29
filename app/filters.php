@@ -22,6 +22,11 @@ App::after(function($request, $response)
 	//
 });
 
+Route::filter('allowOrigin', function($route, $request, $response) 
+{
+    $response->header('access-control-allow-origin','*');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters
@@ -69,6 +74,12 @@ Route::filter('guest', function()
 {
 	if (Auth::check()) return Redirect::to('/');
 });
+
+Route::filter('is_admin', function ()
+{
+   if ( ! is_admin()) return Redirect::to('/');
+});
+
 
 /*
 |--------------------------------------------------------------------------

@@ -17,6 +17,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
+	app_path().'/libs',
 
 ));
 
@@ -79,3 +80,8 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+function is_admin()
+{
+    return Auth::check() && Auth::user()->UsuTip == 1;
+}
