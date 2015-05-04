@@ -34,6 +34,18 @@
     
   
     <div class="row">
+        <div class="container">
+          @if(!$empresa)
+              <div class="col-md-4">
+                  <div class="alert alert-danger alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                 <strong>Por favor crea la parametrización de tu empresa.<br><a href="" title="" class="btn btn-info">Crear <i class="fa fa-pencil"></i></a> </strong> 
+                 </div>              
+              </div>
+          @endif    
+        </div> 
+
        
- 	 </div>  
+ 	 </div>
+   </div>  
 @stop

@@ -12,7 +12,16 @@ class EmpresaController extends Controller {
 
 	public function getIndex()
 	{
-		return View::make('admin.home');
+
+		$empresa = $this->empresa->getInfo();
+		return View::make('admin.home',compact('empresa'));
+	}
+
+
+	public function getParEmp()
+	{
+		$empresa = $this->empresa->getInfo();
+		return View::make('admin.parempresa',compact('empresa'));
 	}
 
 }
