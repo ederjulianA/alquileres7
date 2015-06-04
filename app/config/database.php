@@ -55,13 +55,22 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'alquileres',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'ederapp',
+			'username'  => 'eder',
+			'password'  => 'eder',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
+		    'odbc' => array(
+                'driver'   => 'Driver={SQL Server};Server=(local)',
+                'dsn'      => 'odbc:alquileres',
+                'charset'  => 'utf8',
+                'username' => 'sa',
+                'password' => 'Somic321',
+                'database' => 'appmantis',
+                'prefix'   => '',
+            ),
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',

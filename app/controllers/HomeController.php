@@ -22,7 +22,16 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('index');
+		
+      	
+      	 
+		
+		$ciudad = Ciudad::all();
+		dd($ciudad);
+		return View::make('index', compact('ciudad'));
+
+         	 
+   
 	}
 
 
