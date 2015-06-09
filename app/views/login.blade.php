@@ -26,7 +26,7 @@
 <!-- Login Form Starts -->
 		<form class="myform" method="post" action="/postLogin" accept-charset="UTF-8">
 									<div class="form-group">
-										<label class="control-label">Email</label>
+										<label class="control-label">Emaillll</label>
 										<div class="controls">
 											<input id="email" class="form-control" type="text" placeholder="Email" name="email">
 										</div>

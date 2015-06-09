@@ -1,0 +1,55 @@
+.btnAdd{
+	border:0;
+	text-decoration: none;
+	padding: 7px;
+	border-radius: 2px;
+	text-shadow: 1px 2px 2px rgba(0,0,0,.2);
+	width: 50%;
+	font-weight: bold;
+	background-color: #4BBF83;
+	color: #fff;
+	border-bottom: 2px solid #3E9A6A;
+}
+
+.cont-cate{
+	width: 100%;
+}
+.cont-cate h2 {
+	text-align:  center;
+
+}
+
+.cont-cate div {
+	width: 45%;
+	height: 200px;
+
+	margin: 0 auto;
+	margin: 10px auto;
+	/*border: 1px solid blue;*/
+	display: inline-block;
+}
+
+.imageP{
+	/*border :1px solid red;*/
+	width: 120px;
+	height: auto;
+}
+.imageP img {
+	height: 100%;
+	width: auto;
+}
+
+.infoIte {
+	text-align:  center;
+}
+.proIte {
+	/*box-shadow: 2px 2px 1px rgba(0,0,0,.3);*/
+}
+.proIte div {
+	vertical-align: top;
+}
+.priceP {
+	font-size: 20px;
+	font-weight: bold;
+
+}

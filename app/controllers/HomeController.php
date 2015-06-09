@@ -23,15 +23,20 @@ class HomeController extends BaseController {
 	public function getIndex()
 	{
 		
-      	
-      	 
-		
-		$ciudad = Ciudad::all();
-		dd($ciudad);
-		return View::make('index', compact('ciudad'));
+      $items = Item::all();	
+      
+      return View::make('index', compact('items'));
+	}
 
-         	 
-   
+	public function getItem($id)
+	{
+		$item = Item::where('ItemId','=',$id)->first();
+		$categorias = Categoria::where('ItemId','=',$id)->get();
+		$pro = Producto::where('CategoryId','=',1)->get();
+		
+		
+
+		return View::make('items', compact('categorias','pro','item'));
 	}
 
 

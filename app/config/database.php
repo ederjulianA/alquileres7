@@ -51,8 +51,18 @@ return array(
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
-
 		'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'alquileres1',
+			'username'  => 'eder',
+			'password'  => 'eder',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+		/*'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'ederapp',
@@ -61,7 +71,7 @@ return array(
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
-		),
+		),*/
 		    'odbc' => array(
                 'driver'   => 'Driver={SQL Server};Server=(local)',
                 'dsn'      => 'odbc:alquileres',

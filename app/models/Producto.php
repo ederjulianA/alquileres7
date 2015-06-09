@@ -1,11 +1,14 @@
 <?php
 class Producto extends Eloquent {
 
-		protected $table = 'productos';
+		protected $table = 'products';
 
 
 
-		
+		public function categoria()
+		{
+			return $this->belongsTo('Categoria');
+		}
 
 		
 	}

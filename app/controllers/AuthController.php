@@ -52,7 +52,7 @@ class AuthController extends Controller {
 					if(Auth::user()->UsuTip != 1)
 
 						{
-						return Redirect::back();
+						return Redirect::back()->with('message-alert', 'Ha iniciado sesión correctamente');
 
 						}
 						else {
@@ -61,11 +61,11 @@ class AuthController extends Controller {
 
 					
 				}else{
-				return Redirect::route('login')
+				return Redirect::back()
 				->with('message-alert', 'El email o la contraseña no coinciden, o la cuenta no esta activada');
 				}
 				}
-				return Redirect::route('login')
+				return Redirect::back()
 				->with('message-alert', 'Hubo un problema en el inicio de sesión ');
 		}
 
