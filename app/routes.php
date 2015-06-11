@@ -15,6 +15,9 @@ Route::get('/', array('as' => 'index', 'uses' => 'HomeController@getIndex'));
 Route::get('/cart', array('as' => 'cart', 'uses' => 'CartController@getCart'));
 Route::get('/item-{id}', array('as' => 'item', 'uses' => 'HomeController@getItem'));
 
+Route::post('postPedido', array('as' => 'postPedido', 'uses' => 'CartController@postPedido'));
+Route::post('removeItem', array('as' => 'removeItem', 'uses' => 'CartController@removeItem'));
+Route::post('addToCart', array('as' => 'addToCart', 'uses' => 'CartController@addToCart'));
 
 
 //USUARIOS ADMINISTRADORES
@@ -27,11 +30,10 @@ Route::group(['before' => 'auth'], function() {
 Route::group(['before' => 'guest'], function () {
 	
 
-Route::post('removeItem', array('as' => 'removeItem', 'uses' => 'CartController@removeItem'));
 Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
 Route::post('postLogin', array('as' => 'postLogin', 'uses' => 'AuthController@postLogin'));
-Route::post('addToCart', array('as' => 'addToCart', 'uses' => 'CartController@addToCart'));
-Route::post('postPedido', array('as' => 'postPedido', 'uses' => 'CartController@postPedido'));
+
+
 });
 
 

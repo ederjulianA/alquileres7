@@ -115,13 +115,14 @@
 						</tr>
 						<tr>
 							<td colspan="4">
+					
 								
 							</td>
 							<td colspan="2">
 								@if(Auth::check())
 									<form method="post" action="{{URL::route('postPedido')}}">
 										<input type="hidden" name="totalCart" value="{{Cart::total()}}">
-										<button class="btn btn-warning btn-lg text-right" href=""> FINALIZAR MI PEDIDO!</button>
+										<button class="btn btn-warning btn-lg text-right" type="submit"> FINALIZAR MI PEDIDO!</button>
 									</form>
 								@endif	
 							</td>

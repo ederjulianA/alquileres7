@@ -5,7 +5,7 @@ class PedidoDetalle extends Eloquent {
 
 
 
-		
+		public $timestamps = false;
 
 		
 	}

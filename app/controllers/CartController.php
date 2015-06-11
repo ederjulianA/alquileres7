@@ -45,20 +45,22 @@ class CartController extends Controller {
 
 		public function postPedido()
 	{
-		dd(Input::all());
+		//dd(Input::all());
 
 		$compra = new Pedido;
-		$compra->UsuIde 	=	Auth::user()->id;
+		$compra->UsuIde 	=	Auth::user()->UsuIde;
 		$compra->CotTotal  =   Input::get('totalCart');
 		/*$compra->total_compra  =   Input::get('total_compra');
 		$compra->num_items  =   Input::get('totalItems');
 		$compra->tipo_compra = 	Input::get('tipo_compra');
 		$compra->vlr_envio   =  Input::get('vlr_envio_a');*/
+
 			if($compra->save())
 			{
+				//dd($compra->id);
 				foreach (Cart::contents() as $item) {
 					$citem = new PedidoDetalle;
-					$citem->CotId 			=	$compra->CotId;
+					$citem->CotId 			=	$compra->id;
 
 	   			 	$citem->ProId				=	$item->id;
 	   			 	$citem->CotProCan 			=	$item->quantity;
@@ -82,6 +84,7 @@ class CartController extends Controller {
 
 	}
 
-}
+
+}	
 
 ?>
