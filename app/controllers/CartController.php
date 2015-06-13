@@ -49,7 +49,8 @@ class CartController extends Controller {
 
 		$compra = new Pedido;
 		$compra->UsuIde 	=	Auth::user()->UsuIde;
-		$compra->CotTotal  =   Input::get('totalCart');
+		$compra->TotalCot  =   Input::get('totalCart');
+		$compra->CotEstId  =1;
 		/*$compra->total_compra  =   Input::get('total_compra');
 		$compra->num_items  =   Input::get('totalItems');
 		$compra->tipo_compra = 	Input::get('tipo_compra');
@@ -64,7 +65,7 @@ class CartController extends Controller {
 
 	   			 	$citem->ProId				=	$item->id;
 	   			 	$citem->CotProCan 			=	$item->quantity;
-	   			 	$citem->CotProPre			=	$item->price;
+	   			 	$citem->TotalPro			=	$item->price;
 	   			 	/*$citem->image               =   $item->image;
 	   			 	$citem->iva 				=	$item->tax;
 	   			 	$citem->cantidad 			= 	$item->quantity;
@@ -74,6 +75,13 @@ class CartController extends Controller {
 
 				}
 				Cart::destroy();
+					//$usuEmail = Auth::user()->email;
+					//$usuName  = Auth::user()->UsuNom;
+					$prod   = PedidoDetalle::where('CotId','=',$compra->id)->get();
+
+					Mail::send('emails.cotizacion', array('compra' =>$compra,'prod'=>$prod ), function($message) use ($compra){
+						$message->to(Auth::user()->email, Auth::user()->UsuNom)->subject('Cotización coordieventos');
+					});
 
 				return Redirect::to('/')->with('message-alert','Se ha hecho la solicitud de tu pedido exitosamente');
 				
