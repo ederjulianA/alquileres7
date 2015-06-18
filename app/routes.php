@@ -12,6 +12,7 @@
 */
 
 Route::get('/', array('as' => 'index', 'uses' => 'HomeController@getIndex'));
+Route::get('/test', array('as' => 'test', 'uses' => 'HomeController@getTest'));
 Route::get('/cart', array('as' => 'cart', 'uses' => 'CartController@getCart'));
 Route::get('/item-{id}', array('as' => 'item', 'uses' => 'HomeController@getItem'));
 

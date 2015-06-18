@@ -77,6 +77,7 @@ class CartController extends Controller {
 				Cart::destroy();
 					//$usuEmail = Auth::user()->email;
 					//$usuName  = Auth::user()->UsuNom;
+				
 					$prod   = PedidoDetalle::where('CotId','=',$compra->id)->get();
 
 					Mail::send('emails.cotizacion', array('compra' =>$compra,'prod'=>$prod ), function($message) use ($compra){
