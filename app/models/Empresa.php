@@ -5,11 +5,11 @@ class Empresa extends Eloquent {
 
 
 
-		protected $fillable = array('EmpNom','EmpLogo','EmpRazSoc','EmpDesc','EmpTel','EmpDir');
+		//protected $fillable = array('EmpNom','EmpLogo','EmpRazSoc','EmpDesc','EmpTel','EmpDir');
 
 		public function getInfo()
 		{
-			$empresa = Empresa::where('EmpId','=',1)->first();
+			$empresa = Empresa::where('EmpresaId','=',1)->first();
 			return $empresa;
 		}
 	}

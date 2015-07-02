@@ -15,6 +15,14 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	protected $empresa;
+	//protected $pro;
+	public function __construct(Empresa $empresa)
+	{
+		$this->empresa = $empresa;
+		//$this->pro 	   = $pro;	
+	}
+
 	public function showWelcome()
 	{
 		return View::make('hello');
@@ -27,10 +35,10 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		
+	  $emp   = $this->empresa->getInfo();
       $items = Item::all();	
       
-      return View::make('index', compact('items'));
+      return View::make('index', compact('items','emp'));
 	}
 
 	public function getItem($id)

@@ -1,6 +1,8 @@
 @extends('plantilla.co')
 
-
+@section('info-empresa')
+  {{$emp->EmpDir}}---{{$emp->EmpTel}}
+@stop
 
 @section('content')
    <section id="home">
@@ -750,5 +752,8 @@
             </div>
 
           </section><!--END HOME-->
+
+          
+ 
 @stop
 

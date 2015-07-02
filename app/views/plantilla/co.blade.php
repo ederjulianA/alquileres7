@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Dish - Home</title>
+    <title>Alquilleres</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -62,11 +62,11 @@
             
             <nav class="short-contact pull-right">
               <ul class="wheel-group">
-                <li><p>331 W 4th St, New York, NY, USA  Phone1 +1 212-242-9502</p></li>
+                <li><p>@yield('info-empresa')</p></li>
                 <li><a href="#"><i class="wheel wheel-social icon-facebook"></i></a></li>
                 <li><a href="#"><i class="wheel wheel-social icon-twitter"></i></a></li>
-                <li><a href="#"><i class="wheel wheel-social icon-google-plus"></i></a></li>
-                <li><a href="#"><i class="wheel wheel-social icon-rss"></i></a></li>
+                <!--<li><a href="#"><i class="wheel wheel-social icon-google-plus"></i></a></li>
+                <li><a href="#"><i class="wheel wheel-social icon-rss"></i></a></li>-->
               </ul>
               <div class="line"></div>
             </nav>
@@ -100,7 +100,7 @@
                           </ul>
                         </li>
                       <li><a href="03_menucard.html">Menucard</a></li>
-                      <li><a href="04_gallery.html">Gallery</a></li>
+                      <!--<li><a href="04_gallery.html">Gallery</a></li>
                         <li class="dropdown">
                           <a href="02_aboutus.html" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
                           <ul class="dropdown-menu">
@@ -121,7 +121,7 @@
                                 <li><a href="18_single_product.html">Single Product</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{URL::route('cart')}}">Carrito</a></li>
+                        <li><a href="{{URL::route('cart')}}">Carrito</a></li>-->
                     </ul>
                   </div>
                 
