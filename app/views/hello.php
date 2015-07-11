@@ -22,6 +22,10 @@
 			margin-left: -150px;
 			margin-top: -100px;
 		}
+		/*
+			http://vasterad.com/themes/trizzy/index.html
+			http://themeforest.net/item/media-center-electronic-ecommerce-html-template/full_screen_preview/8178892?ref=hdalive
+		*/
 
 		a, a:visited {
 			text-decoration:none;

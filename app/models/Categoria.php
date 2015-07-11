@@ -2,6 +2,7 @@
 class Categoria extends Eloquent {
 
 		protected $table = 'category';
+		protected $primaryKey = "CategoryId";
 
 		public function item()
 		{

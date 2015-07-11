@@ -9,7 +9,13 @@
     <meta name="author" content="">
 
     <link rel="stylesheet" type="text/css" href="{{asset('co/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('co/css/estilo.css')}}">
     @yield('css')
+    <style type="text/css" media="screen">
+      .cont-eder{
+        z-index: -9999;
+      }  
+    </style>
     <!--[if lt IE 9]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
     <![endif]-->
@@ -24,6 +30,7 @@
     <script src="{{asset('co/libs/jquery.easing.1.3.js')}}"></script>
     <script src="{{asset('co/libs/jquery.tweet.js')}}"></script>
     <script src="{{asset('co/libs/custom.js')}}"></script>
+    @yield('js')
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -34,13 +41,16 @@
 
   <body>
 
-  <div id="boxedWrapper">
 
+
+  <div id="boxedWrapper">
+  
   <header id="top">
+    @yield('pendiente')
      @if(Session::has('message-alert'))
         <div class="row">
           <div class="col-md-5">
-             
+                   
 
                   <div class="alert alert-warning alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -59,6 +69,7 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span12">
+           <img src="{{asset('co/logo-coordieventos.jpg')}}" alt="" class="imgLogo">
             
             <nav class="short-contact pull-right">
               <ul class="wheel-group">
@@ -82,24 +93,20 @@
                     <span class="icon-bar"></span>
                   </button>
 
-                  <a class="brand" href="index.html">Dish</a>
+                  <a class="brand" href="/">Dish</a>
 
                   <div class="nav-collapse collapse">
                     <ul class="nav pull-right">
-                      <li class="active"><a href="index.html">Home</a></li>
+                      <li class="active"><a href="/">Home</a></li>
                         <li class="dropdown">
-                          <a href="02_aboutus.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+                          <a href="02_aboutus.html" class="dropdown-toggle" data-toggle="dropdown">Qué alquilar</a>
                           <ul class="dropdown-menu">
-                              <li><a href="02_aboutus.html">About Us</a></li>
-                              <li><a href="10_icons.html">Icons</a></li>
-                              <li><a href="01_home-green.html">Green Variant</a></li>
-                              <li><a href="01_home-brown.html">Brown Variant</a></li>
-                              <li><a href="01_home-orange.html">Orange Variant</a></li>
-                              <li><a href="01_home-pink-blue.html">Pink Blue Variant</a></li>
-                              <li><a href="01_home-steel.html">Steel Variant</a></li>
+                              @yield('alquilar')
+                             
+                           
                           </ul>
                         </li>
-                      <li><a href="03_menucard.html">Menucard</a></li>
+                      <li><a href="{{URL::route('cart')}}">Mi cotización</a></li>
                       <!--<li><a href="04_gallery.html">Gallery</a></li>
                         <li class="dropdown">
                           <a href="02_aboutus.html" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
@@ -138,7 +145,7 @@
 
   <!-- FIN CONTAINER1########################################-->
 
-  <section id="content">
+  <section id="content  cont-eder">
     
     <div class="container">
       <div class="row-fluid">
@@ -161,22 +168,24 @@
         <div class="span3">
           <article>
             <header>
-              <h3>About dish</h3>
+              <h3>Sobre Coordieventos</h3>
             </header>
-            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus.</p>
-            <p>Posuere velit aliquet. Duis mollis, est non commodo luctus.</p>
-            <div class="special">dish.</div>
+            <p>
+           COORDIEVENTOS S.A.S, es una empresa dedicada a asesorar, coordinar y realizar eventos sociales y empresariales; tiene la capacidad, talento humano, infraestructura y experiencia de más de 17 años; para satisfacer los deseos y necesidades de sus clientes, con un alto grado de eficiencia, eficacia y responsabilidad social.
+
+            </p>
+            
+            <div class="special">Coordieventos.</div>
             <ul class="icons-group">
               <li><p><i><img src="{{asset('co/images/icon-map-marker.png')}}" alt=""></i>331 W 4th St, New York, NY,</p></li>
-              <li><p><i><img src="{{asset('co/images/icon-phone.png')}}" alt=""></i>(049) +1 212-242-9502</p></li>
-              <li><p><i><img src="{{asset('co/images/icon-email.png')}}" alt=""></i>hello@dish.com</p></li>
+              
             </ul>
           </article>
         </div>
         <div class="span3">
           <article>
             <header>
-              <h3>Get in Contact</h3>
+              <h3>Mantente informado</h3>
             </header>
             <ul class="icons-group">
               <li><p><i><img src="{{asset('co/images/icon-phone.png')}}" alt=""></i>Phone1 +1 212-242-9502<br>Phone2 +1 212-242-9503</p></li>
@@ -191,7 +200,7 @@
         <div class="span3">
           <article>
             <header>
-              <h3>Latest Tweets</h3>
+              <h3> Tweets</h3>
             </header>
               <div class="tweets"></div>
           </article>
@@ -199,9 +208,9 @@
         <div class="span3">
           <article class="book-table">
             <header>
-              <h3>Book a Table</h3>
+              <h3>info</h3>
             </header>
-            <form class="contactForm" action="form/table.php" method="post">
+            <!--<form class="contactForm" action="form/table.php" method="post">
               <fieldset>
                 <ul>
                   <li>
@@ -231,7 +240,7 @@
                 </ul>
                 <input type="submit" value="Book a Table" class="btn btn-primary btn-block" />
               </fieldset>
-            </form>
+            </form>-->
           </article>
         </div>
       </div>
@@ -244,7 +253,7 @@
       <div class="row-fluid">
         <div class="span3">
           <p>
-              &copy; Copyright 2013 <strong>dish.</strong>/ <span>Coded by <a href="http://outsourcing.createit.pl/"><strong>createIT</strong></a></span>
+              &copy; Copyright 2015 <strong>Coordieventos</strong>/ <span>Coded by <a href=""><strong>Megalópolis</strong></a></span>
           </p>
           <p>
             PSD Template by <a href="#">templaterockers</a>

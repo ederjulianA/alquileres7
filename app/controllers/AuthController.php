@@ -69,6 +69,58 @@ class AuthController extends Controller {
 				->with('message-alert', 'Hubo un problema en el inicio de sesión ');
 		}
 
+
+		public function postLoginCheckout()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'email' 		    => 'required|email|unique:users',
+						'password'		    => 'required|alpha_num|min:6|confirmed',
+						
+					
+
+					)
+			);
+
+
+		if($validator->fails())
+		{
+			return Redirect::back()->withInput()->with('message-alert','Errores en el formulario')->withErrors($validator->messages());
+		}
+
+		$user = new User;
+		$user->email  		= Input::get('email');
+		$user->password  	= Hash::make(Input::get('password'));
+		$user->UsuTip 		= 0;
+		//$user->condiciones 	= true;
+
+		if($user->save())
+		{
+						  $remember = (Input::has('remember')) ? true : false;
+				//creamos la sesion del usuario
+				$auth = Auth::attempt(array(
+						'email'  => $user->email,
+						'password' => Input::get('password'),
+						//'active' => 1
+					), $remember);
+
+				if($auth){
+					if(Auth::user()->UsuTip == 1)
+
+						{
+						return Redirect::back();
+
+						}
+						else {
+							return Redirect::intended('admin');
+						}
+				}else{
+					return Redirect::route('login')
+				->with('message-alert', 'El email o la contraseña no coinciden, o la cuenta no esta activada');
+				}
+		}
+	}
+
 	
 
 

@@ -15,10 +15,14 @@ Route::get('/', array('as' => 'index', 'uses' => 'HomeController@getIndex'));
 Route::get('/test', array('as' => 'test', 'uses' => 'HomeController@getTest'));
 Route::get('/cart', array('as' => 'cart', 'uses' => 'CartController@getCart'));
 Route::get('/item-{id}', array('as' => 'item', 'uses' => 'HomeController@getItem'));
+Route::get('/categoria-{id}', array('as' => 'categoryList', 'uses' => 'CategoryController@getCatList'));
 
 Route::post('postPedido', array('as' => 'postPedido', 'uses' => 'CartController@postPedido'));
-Route::post('removeItem', array('as' => 'removeItem', 'uses' => 'CartController@removeItem'));
+Route::post('removeItem', array('as' => 'removeItem', 'uses' => 'CartController@getRemoveitem'));
 Route::post('addToCart', array('as' => 'addToCart', 'uses' => 'CartController@addToCart'));
+Route::post('updateItem', array('as' => 'updateItem', 'uses' => 'CartController@updateItem'));
+
+Route::post('postLoginCheckout', array('as' => 'postLoginCheckout', 'uses' => 'AuthController@postLoginCheckout'));
 
 
 //USUARIOS ADMINISTRADORES

@@ -218,7 +218,7 @@ input {
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  padding: 0;
+  padding: 10px;
   border: 0;
 }
 button,
@@ -1337,7 +1337,7 @@ input[type="date"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
-input[type="number"],
+/*input[type="number"],*/
 input[type="email"],
 input[type="url"],
 input[type="search"],

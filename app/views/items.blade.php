@@ -95,8 +95,14 @@
      
     </ul>
 </div>
-
+<div>
+	<h2>Productos</h2>
+		@foreach($productos as $p)
+		{{dd($productos)}}
+	@endforeach
+</div>
 <div class="tab-content">
+
 	@foreach($categorias as $cat)
 		<div class="tab-pane " id="tab-{{$cat->CategoryId}}">
 			
