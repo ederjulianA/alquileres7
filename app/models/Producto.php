@@ -10,5 +10,7 @@ class Producto extends Eloquent {
 			return $this->belongsTo('Categoria','CategoryId');
 		}
 
+		public $timestamps = false;
+
 		
 	}

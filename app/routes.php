@@ -39,6 +39,12 @@ Route::get('login', array('as' => 'login', 'uses' => 'AuthController@getLogin'))
 Route::post('postLogin', array('as' => 'postLogin', 'uses' => 'AuthController@postLogin'));
 
 
+
+		//RUTAS DE PRUEBAS CON IMAGENES
+
+		Route::get('/images', array('as' => 'images', 'uses' => 'PruebaController@images'));
+
+
 });
 
 

@@ -75,7 +75,7 @@ class CartController extends Controller {
 
 	   			 	$citem->ProId				=	$item->id;
 	   			 	$citem->CotProCan 			=	$item->quantity;
-	   			 	$citem->TotalPro			=	$item->price;
+	   			 	$citem->TotalPro			=	($item->price)*($item->quantity);
 	   			 	/*$citem->image               =   $item->image;
 	   			 	$citem->iva 				=	$item->tax;
 	   			 	$citem->cantidad 			= 	$item->quantity;

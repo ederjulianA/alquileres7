@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Bogota',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,6 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 		'Moltin\Cart\CartServiceProvider',
 		'rexlu\Laravelodbc\ODBCServiceProvider',
 
@@ -191,6 +192,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Cart' 				=> 'Moltin\Cart\Facade',
+		'Image' 		  => 'Intervention\Image\Facades\Image'
 
 	),
 

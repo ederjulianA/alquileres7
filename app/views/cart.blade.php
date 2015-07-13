@@ -135,30 +135,14 @@
 		@if(!Auth::check())
 		<div class="cont-login">
 			<h3>Para finalizar tu pedido Inicia Sesion con tu cuenta</h3>
+<!--   FORM LOGIN-->
+		@include('includes.forms.login')
+<!--   END FORM LOGIN-->
 
-<form class="form-container" method="post" action="{{URL::route('postLogin')}}">
-		<div class="form-title"><h2>Iniciar sesion</h2></div>
-		<div class="form-title">email</div>
-		<input class="form-field" type="email" name="email"placeholder="ejemplo@ejemplo.com" required /><br />
-		<div class="form-title">Contraseña</div>
-		<input class="form-field" type="password" name="password" /><br />
-		<div class="submit-container">
-		<input class="submit-button" type="submit" value="Login" />
-		</div>
-</form>
 
-<form class="form-container" method="post" action="{{URL::route('postLoginCheckout')}}">
-		<div class="form-title"><h2>Crear Cuenta</h2></div>
-		<div class="form-title">email</div>
-		<input class="form-field" type="email" name="email"placeholder="ejemplo@ejemplo.com" required /><br />
-		<div class="form-title">Contraseña</div>
-		<input class="form-field" type="password" name="password" /><br />
-		<div class="form-title">Contraseña Confirmar</div>
-		<input class="form-field" type="password" name="password_confirmation" /><br />
-		<div class="submit-container">
-		<input class="submit-button" type="submit" value="Crear cuenta" />
-		</div>
-</form>
+<!--   FORM REGISTER-->
+		@include('includes.forms.register')
+<!--   END FORM REGISTER-->
 <!--<form method="post" action="{{URL::route('postLogin')}}">
   <div class="form-group">
     <label for="exampleInputEmail1">Email </label>
@@ -178,6 +162,24 @@
 		{{Auth::user()->email}}
 		@endif		
 			<h2>TU COTIZACIÓN</h2>
+
+			<div class="info-cot">
+				<div class="bloque-info">
+					<label>FECHA EVENTO</label>
+					<input type="date" name="fecha">
+					
+				</div>
+				<div class="bloque-per">
+					<label> NÚMERO DE PERSONAS</label>
+					<input type="number" id="numPer">
+					<p>
+						 Actualizar cantidades en la cotización
+						 <a href="#" title="" id="btn-numPer">ACTUALIZAR</a>
+					</p>
+					
+				</div>
+				
+			</div>
 		<table class="table table-bordered">
 					<thead>
 						<tr>
@@ -236,13 +238,13 @@
 									</td>
 									<td class="text-center">
 										<button type="submit" title="Actualizar" class="btn btn-default tool-tip">
-											<i class="fa fa-refresh"></i>
+											<i class="icon icon-refresh"></i>
 										</button>
 								</form>
 									<form action="{{URL::route('removeItem')}}" method="post">	
 									<input type="hidden" name="identifier" value="{{$pro->identifier}}">	
 										<button type="submit" title="Remove" class="btn btn-default tool-tip">
-											<i class="fa fa-times-circle"></i>
+											<i class="icon icon-remove"></i>
 										</button>
 									</form>	
 									</td>
@@ -255,6 +257,7 @@
 						<tr>
 						  <td colspan="4" class="text-right">
 							<strong>Sub-total :</strong>
+							<!--3008465628-->
 						  </td>
 						  <td colspan="2" class="text-left">
 							$<span class="totalCart">{{number_format(Cart::total(false), 0, '', '.')}}</span>
@@ -285,4 +288,8 @@
 						</tr>
 					</tfoot>
 				</table>
+@stop
+
+@section('js')
+	<script src="{{asset('co/js/functions.js')}}"></script>
 @stop
