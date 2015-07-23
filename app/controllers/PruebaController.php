@@ -9,6 +9,7 @@ class  PruebaController extends Controller {
 
 		$pro = Producto::whereNull('ProImgLar')->get();
 		$num = count($pro);
+		
 	
 		foreach ($pro as $p) {
 			 $slug = Str::slug($p->ProNom);
@@ -16,7 +17,8 @@ class  PruebaController extends Controller {
 			$codigoIMG = str_random(13);
 			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG.".jpg";
 
-			Image::make($p->ProImg)->resizeCanvas(400, 400, null, true, '#fff')->save(public_path().'/img/products/'.$filename);
+			//Image::make($p->ProImg)->resizeCanvas(800, 400, null, false, '#fff')->save(public_path().'/img/products/'.$filename);
+			Image::make($p->ProImg)->save(public_path().'/img/products/'.$filename);
 			$p->ProImgLar = 'img/products/'.$filename;
 			$p->ProSlug = $slug;
 			$p->ProFecEdit = $serverDate;

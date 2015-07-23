@@ -1,7 +1,12 @@
 @extends('plantilla.co')
 
 @section('info-empresa')
-  {{$emp->EmpDir}}---{{$emp->EmpTel}}
+	@if(Auth::check())
+		HOLA : {{Auth::user()->email}}---<a href="{{URL::route('logout')}}" title="">Cerrar Sesion</a>
+	@else
+
+	@endif
+ <!-- {{$emp->EmpDir}}-{{$emp->EmpTel}}-->
 @stop
 
 @section('alquilar')
@@ -11,9 +16,7 @@
 @stop
 
 @section('pendiente')
-	@if($products)
-		<a href="" class="btn-end-cot" title="">TERMINAR COTIZACIÓN</a>
-	@endif
+	@include('includes.pendientes')
 @stop
 @section('content')
 
@@ -27,96 +30,7 @@
       <script src="{{asset('co/libs/rainbow.js')}}" type="text/javascript"></script>
       
 <style type="text/css" media="screen">
-	.price2{
-		/*position: absolute;*/
-		font-weight: bold;
-		font-size: 25px;
-		color: #95b44b;
-		
-		
-	}	
-	.btn-end-cot{
-
-		background-color: #F00B0B;
-		border: 2px solid #AD1818;
-		color: #fff;
-		font-weight: bold;
-		position: absolute;
-		padding: 10px;
-		top: 
-		10%;
-	}
-	.cantidad{
-		margin-top: 0;
-		font-size: 17px;
-		height: 20px;
-		width: 50%;
-	}
-	.cont-p{
-		border-bottom: 1px solid #ccc;
-		margin:  1em auto;
-
-	}
-	.cont-p .pro-item {
-		display: inline-block;
-		vertical-align: top;
-		position: relative;
-		margin: 5px 15px;
-		border: 1px solid #95b44b;
-		width: 29%;
-		 -webkit-box-sizing: border-box;
-     		-moz-box-sizing: border-box;
-          box-sizing: border-box;
-	}
-	.pro-item:hover {
-		border-left: 3px solid #95b44b;
-		cursor: pointer;
-		box-shadow: 2px 2px 2px rgba(0,0,0,.5);
-
-
-	}
-	.imgItem{
-		  object-fit: cover;
-		  height: 250px;
-		  width: 100%;
-	}
-	.precio{
-		font-size: 20px;
-		font-weight: bold;
-		letter-spacing: 1px;
-		color: #95b44b;
-	}
-	.pro-des{
-		
-		text-align: center;
-		width: 95%;
-		height: 150px;
-		padding: 10px;
-	}
-	.pro-bottom{
-		text-align: center;
-	}
-
-	.btn-add{
-		background-color: #95b44b;
-		border-bottom: 1px solid #578648;
-		color: #fff;
-	}
-	.btn-add:hover{
-		background-color: #95b44b;
-		border-bottom: 1px solid #578648;
-		color: #fff;
-		text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-	}
-	.proCat{
-		position: absolute;
-		left: 5px;
-		top: 5px;
-		background-color: #95b44b;
-		color: #fff;
-		border-radius: 50%;
-		padding: 10px;
-	}
+	
 </style>
 
 	
@@ -129,7 +43,11 @@
 			 	<span class="proCat">{{$pro['ProCat']}}</span>
 	            <div class="thumbnail">
 
-	              <img src="data:image/jpeg;base64,<?php echo base64_encode($pro['ProImg']); ?>" alt=""  class="imgItem">
+					<a href="{{$pro['ProImgLar']}}" data-lighter>
+					  <img src="{{$pro['ProImgLar']}}" class="imgItem"/>
+					</a>
+
+	              <!--<img src="{{$pro['ProImgLar']}}" alt=""  class="imgItem">-->
 	              <div class="caption ">
 	              		<div class="pro-des">
 			                <h3>{{{$pro['ProNom']}}}</h3>

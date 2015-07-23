@@ -11,7 +11,7 @@ class CategoryController extends Controller {
 
 	public function getCatList($id)
 	{
-
+		 $products = Cart::contents();
 		 $emp   = $this->empresa->getInfo();
 		 $cat = Categoria::where('CategoryId','=',$id)->first();
 		 $it = Item::where('ItemId','=',$cat->ItemId)->first();
@@ -20,7 +20,7 @@ class CategoryController extends Controller {
 
 		 //dd($productos);
 
-		 return View::make('categoryList',compact('emp','cat','it','pros','items'));
+		 return View::make('categoryList',compact('emp','cat','it','pros','items','products'));
 	}
 
 }

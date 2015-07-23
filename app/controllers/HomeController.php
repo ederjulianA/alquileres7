@@ -35,10 +35,11 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
+	  $products = Cart::contents();
 	  $emp   = $this->empresa->getInfo();
       $items = Item::all();	
       
-      return View::make('index', compact('items','emp'));
+      return View::make('index', compact('items','emp','products'));
 	}
 
 	public function getItem($id)
@@ -81,6 +82,7 @@ class HomeController extends BaseController {
 					'P.ProNom',
 					'p.ProImg',
 					'p.ProDes',
+					'p.ProImgLar',
 					'c.CategoryName',
 					'p.CategoryId'
 				)
@@ -92,7 +94,7 @@ class HomeController extends BaseController {
 				foreach($pro2 as  $prom)
 				{
 					
-					$pros [] =  array('ProId'=> $prom->ProId,'ProPre'=> $prom->ProPre,'ProNom'=>$prom->ProNom,'ProImg'=>$prom->ProImg,'ProCat'=>$prom->CategoryName,'ProCatId'=>$prom->CategoryId ,'ProDes'=>$prom->ProDes);
+					$pros [] =  array('ProId'=> $prom->ProId,'ProPre'=> $prom->ProPre,'ProNom'=>$prom->ProNom,'ProImg'=>$prom->ProImg,'ProCat'=>$prom->CategoryName,'ProCatId'=>$prom->CategoryId ,'ProDes'=>$prom->ProDes,'ProImgLar'=>$prom->ProImgLar);
 					
 				}
 				

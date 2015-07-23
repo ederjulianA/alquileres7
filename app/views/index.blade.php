@@ -1,13 +1,22 @@
 @extends('plantilla.co')
 
 @section('info-empresa')
-  {{$emp->EmpDir}}---{{$emp->EmpTel}}
+  @if(Auth::check())
+    HOLA : {{Auth::user()->email}}---<a href="{{URL::route('logout')}}" title="">Cerrar Sesion</a>
+  @else
+
+  @endif
+ <!-- {{$emp->EmpDir}}-{{$emp->EmpTel}}-->
 @stop
 
 @section('alquilar')
   @foreach($items as $item)
     <li><a href="{{URL::route('item', array('id'=>$item->ItemId))}}">{{$item->ItemName}}</a></li>
    @endforeach
+@stop
+
+@section('pendiente')
+ @include('includes.pendientes')
 @stop
 
 <style type="text/css" media="screen">

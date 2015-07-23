@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('co/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('co/css/estilo.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('co/css/jquery.lighter.css')}}">
     @yield('css')
     <style type="text/css" media="screen">
       .cont-eder{
@@ -29,6 +30,8 @@
     <script src="{{asset('co/libs/jquery.scrollto-1.4.3.1-min.js')}}"></script>
     <script src="{{asset('co/libs/jquery.easing.1.3.js')}}"></script>
     <script src="{{asset('co/libs/jquery.tweet.js')}}"></script>
+    <script src="{{asset('co/js/moment.js')}}"></script>
+    <script src="{{asset('co/js/jquery.lighter.js')}}"></script>
     <script src="{{asset('co/libs/custom.js')}}"></script>
     @yield('js')
 

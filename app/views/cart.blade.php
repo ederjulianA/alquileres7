@@ -1,7 +1,17 @@
 @extends('plantilla.co')
 
 @section('info-empresa')
-  {{$emp->EmpDir}}---{{$emp->EmpTel}}
+  @if(Auth::check())
+		HOLA : {{Auth::user()->email}}---<a href="{{URL::route('logout')}}" title="">Cerrar Sesion</a>
+	@else
+
+	@endif
+ <!-- {{$emp->EmpDir}}-{{$emp->EmpTel}}-->
+@stop
+
+
+@section('pendiente')
+	@include('includes.pendientes')
 @stop
 
 @section('alquilar')
@@ -166,15 +176,17 @@
 			<div class="info-cot">
 				<div class="bloque-info">
 					<label>FECHA EVENTO</label>
-					<input type="date" name="fecha">
+					<input type="date" id="fecha" value="{{ Session::get('Fecha')}}">
 					
 				</div>
 				<div class="bloque-per">
 					<label> NÚMERO DE PERSONAS</label>
-					<input type="number" id="numPer">
+					<input type="number" id="numPer" value="{{ Session::get('cantidad')}}">
 					<p>
 						 Actualizar cantidades en la cotización
-						 <a href="#" title="" id="btn-numPer">ACTUALIZAR</a>
+						 <a href="#" class="btn" title="" id="btn-numPer">ACTUALIZAR</a>
+						 <input type="hidden" id="UrlAct" value="{{URL::route('AjaxActualizar')}}">
+						 <input type="hidden" id="UrlFec" value="{{URL::route('AjaxFecha')}}">
 					</p>
 					
 				</div>
@@ -279,10 +291,16 @@
 							</td>
 							<td colspan="2">
 								@if(Auth::check())
-									<form method="post" action="{{URL::route('postPedido')}}">
+									@if($products)
+									<form method="post" action="{{URL::route('postPedido')}}" id="formCot">
 										<input type="hidden" name="totalCart" value="{{Cart::total()}}">
+										<input type="hidden" name="fecEve" id="FecEve">
+										<input type="hidden" name="CanPer" id="CanPer">
 										<button class="btn btn-warning btn-lg text-right" type="submit"> FINALIZAR MI PEDIDO!</button>
 									</form>
+									@else
+										<button class="btn btn-warning btn-lg text-right" type="submit"> FINALIZAR MI PEDIDO!</button>
+									@endif
 								@endif	
 							</td>
 						</tr>

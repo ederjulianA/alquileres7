@@ -61,6 +61,8 @@ class CartController extends Controller {
 		$compra->UsuIde 	=	Auth::user()->UsuIde;
 		$compra->TotalCot  =   Input::get('totalCart');
 		$compra->CotEstId  =1;
+		$compra->CotNumPer = Session::get('cantidad');
+		$compra->FecCotEve = Session::get('Fecha');
 		/*$compra->total_compra  =   Input::get('total_compra');
 		$compra->num_items  =   Input::get('totalItems');
 		$compra->tipo_compra = 	Input::get('tipo_compra');
@@ -68,6 +70,8 @@ class CartController extends Controller {
 
 			if($compra->save())
 			{
+				Session::forget('cantidad');
+				Session::forget('Fecha');
 				//dd($compra->id);
 				foreach (Cart::contents() as $item) {
 					$citem = new PedidoDetalle;

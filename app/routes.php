@@ -23,12 +23,16 @@ Route::post('addToCart', array('as' => 'addToCart', 'uses' => 'CartController@ad
 Route::post('updateItem', array('as' => 'updateItem', 'uses' => 'CartController@updateItem'));
 
 Route::post('postLoginCheckout', array('as' => 'postLoginCheckout', 'uses' => 'AuthController@postLoginCheckout'));
+//AJAX ROUTES
 
+Route::post('AjaxActualizar', array('as' => 'AjaxActualizar', 'uses' => 'AjaxController@AjaxActualizar'));
+Route::post('AjaxFecha', array('as' => 'AjaxFecha', 'uses' => 'AjaxController@AjaxFecha'));
 
 //USUARIOS ADMINISTRADORES
 Route::group(['before' => 'auth'], function() {
 
 	require (__DIR__ . '/routes/rut_admin.php');
+	Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
 
 });
 
@@ -42,9 +46,11 @@ Route::post('postLogin', array('as' => 'postLogin', 'uses' => 'AuthController@po
 
 		//RUTAS DE PRUEBAS CON IMAGENES
 
-		Route::get('/images', array('as' => 'images', 'uses' => 'PruebaController@images'));
+		
 
 
 });
+
+Route::get('/images', array('as' => 'images', 'uses' => 'PruebaController@images'));
 
 

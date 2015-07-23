@@ -54,6 +54,11 @@
 				Tu cotización se ha proccesado exitosamente, acontinuación el detalle de la cotización
 			</p>
 
+			<p style="margin: 10px auto;padding: 5px;border: 0;font-size: 20px;">
+				Fecha del evento : {{$compra->FecCotEve}} <br>
+				Cantidad de personas : {{$compra->CotNumPer}}
+			</p>
+
 			<hr style="margin: 0;padding: 0;border: 0;font-size: 20px;">
 
 			<table class="table" style="margin: 0;padding: 0;border: 1px solid;font-size: 20px;width: 100%;">

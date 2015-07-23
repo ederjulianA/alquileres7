@@ -17,12 +17,13 @@ class AuthController extends Controller {
 	}
 
 
-		public function logout()
-		{
-			Auth::logout();
-
-			return Redirect::to('/')->with('message','Session closed');
-		}
+	public function logout()
+	{
+		Auth::logout();
+		Cart::destroy();
+		Session::flush();
+		return Redirect::to('/')->with('message-alert','Has Cerrado Sesión');
+	}
 
 
 		public function postLogin()
@@ -56,7 +57,7 @@ class AuthController extends Controller {
 
 						}
 						else {
-							return Redirect::intended('admin');
+							return Redirect::back()->with('message-alert', 'Ha iniciado sesión correctamente');
 						}
 
 					
