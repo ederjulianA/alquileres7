@@ -38,8 +38,9 @@ class HomeController extends BaseController {
 	  $products = Cart::contents();
 	  $emp   = $this->empresa->getInfo();
       $items = Item::all();	
+      $slides = Slides::where('SlideEstado','=','A')->get();
       
-      return View::make('index', compact('items','emp','products'));
+      return View::make('index', compact('items','emp','products','slides'));
 	}
 
 	public function getItem($id)

@@ -15,9 +15,7 @@
 	 @endforeach
 @stop
 
-@section('pendiente')
-	@include('includes.pendientes')
-@stop
+
 @section('content')
 
  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -35,12 +33,12 @@
 
 	
 <div class="row cont-p">
-	<h2>{{$it->ItemName}}</h2>
+	<h3>{{$it->ItemName}}</h3>
 		@if($pros)
 			@foreach($pros as $pro)					
 			 <div class=" col-md-4 pro-item">
 
-			 	<span class="proCat">{{$pro['ProCat']}}</span>
+			 	<!--<span class="proCat">{{$pro['ProCat']}}</span>-->
 	            <div class="thumbnail">
 
 					<a href="{{$pro['ProImgLar']}}" data-lighter>

@@ -10,9 +10,7 @@
 @stop
 
 
-@section('pendiente')
-	@include('includes.pendientes')
-@stop
+
 
 @section('alquilar')
 	@foreach($items as $item)
@@ -139,6 +137,11 @@
 
 		   	margin: 5px 15px !important;
 		   }
+
+		   .imgCart{
+		   	width: 120px;
+		   	height: auto;
+		   }
 </style>
 @section('content')
 		
@@ -169,7 +172,7 @@
 			
 		</div>
 		@else
-		{{Auth::user()->email}}
+		<!--{{Auth::user()->email}}-->
 		@endif		
 			<h2>TU COTIZACIÓN</h2>
 
@@ -224,7 +227,9 @@
 								<tr>
 									<td class="text-center">
 										<a href="product.html">
-											<img src="data:image/jpeg;base64,<?php echo base64_encode($pro->image); ?>" alt="Product Name" title="Product Name" class="" height="120px" width="auto" />
+											<!--<img src="data:image/jpeg;base64,<?php echo base64_encode($pro->image); ?>" alt="Product Name" title="Product Name" class="" height="100px" width="auto" />
+											-->
+											<img src="{{$pro->img}}" alt="Product Name" title="Product Name" class="imgCart" height="100px" width="auto" />
 										</a>
 									</td>
 									<td class="text-center">

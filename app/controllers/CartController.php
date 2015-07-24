@@ -34,6 +34,7 @@ class CartController extends Controller {
 				'name' => $producto->ProNom,
 				'price' => $producto->ProPre,
 				'quantity' => Input::get('cantidad'),
+				'img'    =>$producto->ProImgLar,
 				//'tax'	=>$producto->por_iva,
 				'image' => $producto->ProImg
 			));

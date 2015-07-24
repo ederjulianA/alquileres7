@@ -15,11 +15,7 @@
 	 @endforeach
 @stop
 
-@section('pendiente')
 
-	@include('includes.pendientes')
-
-@stop
 @section('content')
 
  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -115,7 +111,7 @@
 
 	
 <div class="row cont-p">
-	<h2> <a href="{{URL::route('item',array('id'=>$it->ItemId))}}">{{$it->ItemName}}</a>--{{$cat->CategoryName}}</h2>
+	<h3> <a href="{{URL::route('item',array('id'=>$it->ItemId))}}">{{$it->ItemName}}</a>--{{$cat->CategoryName}}</h3>
 		@if($pros)
 			@foreach($pros as $pro)					
 			 <div class=" col-md-4 pro-item">

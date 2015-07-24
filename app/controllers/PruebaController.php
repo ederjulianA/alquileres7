@@ -7,7 +7,8 @@ class  PruebaController extends Controller {
 
 		$serverDate = date('Y-m-d-H-m-s');
 
-		$pro = Producto::whereNull('ProImgLar')->get();
+		//$pro = Producto::whereNull('ProImgLar')->get();
+		$pro = Producto::all();
 		$num = count($pro);
 		
 	
