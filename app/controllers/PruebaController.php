@@ -15,8 +15,9 @@ class  PruebaController extends Controller {
 		foreach ($pro as $p) {
 			 $slug = Str::slug($p->ProNom);
 			 //$img = Image::make($pro->ProImg);
-			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG.".jpg";
+			//$codigoIMG = str_random(13);
+			$filename = $p->ProId."."."jpg";
+			
 
 			//Image::make($p->ProImg)->resizeCanvas(800, 400, null, false, '#fff')->save(public_path().'/img/products/'.$filename);
 			Image::make($p->ProImg)->save(public_path().'/img/products/'.$filename);

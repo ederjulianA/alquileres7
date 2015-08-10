@@ -34,8 +34,130 @@
 			 </div>
 	</div>
 @endforeach
-	
 
+
+
+  <div class=" col-md-4">
+            <div class="thumbnail">
+              <img src="data:image/jpeg;base64,<?php echo base64_encode($pro->ProImg); ?>" alt="" width="240px">
+              <div class="caption">
+                <h3>{{{$pro['ProNom']}}}</h3>
+                <p>...</p>
+                <p><a href="#" class="btn btn-success" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+	
+<div class="row-fluid">
+                <div class="span6">
+                    <article class="menucard">
+                        <header>
+                            <h3>Carnes</h3>
+                        </header>
+                        <ul>
+                            <li>
+                                <div class="image">
+                                    <figure class="rounded">
+                                        <img src="images/content-demo/img43.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="data">
+                                    <h4>Ejemplo No. 1</h4>
+
+                                    <p>
+                                        Pellentesque habitant morbi tristique senectus et netus et male.
+                                    </p>
+                                    <span class="price">7.99$</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <figure class="rounded">
+                                        <img src="images/content-demo/img44.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="data">
+                                    <h4>Ejemplo. 1</h4>
+
+                                    <p>
+                                        Pellentesque habitant morbi tristique senectus et netus et male.
+                                    </p>
+                                    <span class="price">7.99$</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <figure class="rounded">
+                                        <img src="images/content-demo/img45.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="data">
+                                    <h4>Ejemplo No. 1</h4>
+
+                                    <p>
+                                        Pellentesque habitant morbi tristique senectus et netus et male.
+                                    </p>
+                                    <span class="price">7.99$</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="span6">
+                    <article class="menucard">
+                        <header>
+                            <h3>Comida marina</h3>
+                        </header>
+                        <ul>
+                            <li>
+                                <div class="image">
+                                    <figure class="rounded">
+                                        <img src="images/content-demo/img43.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="data">
+                                    <h4>Pescados No. 1</h4>
+
+                                    <p>
+                                        Pellentesque habitant morbi tristique senectus et netus et male.
+                                    </p>
+                                    <span class="price">7.99$</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <figure class="rounded">
+                                        <img src="images/content-demo/img44.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="data">
+                                    <h4>Pescados No. 1</h4>
+
+                                    <p>
+                                        Pellentesque habitant morbi tristique senectus et netus et male.
+                                    </p>
+                                    <span class="price">7.99$</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <figure class="rounded">
+                                        <img src="images/content-demo/img45.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="data">
+                                    <h4>Pescados No. 1</h4>
+
+                                    <p>
+                                        Pellentesque habitant morbi tristique senectus et netus et male.
+                                    </p>
+                                    <span class="price">7.99$</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
 
 		
 
